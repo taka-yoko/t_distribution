@@ -9,7 +9,7 @@ const Table: React.FC = () => {
   const [selectedCol, setSelectedCol] = useState<number | null>(null);
 
   useEffect(() => {
-    Papa.parse('/data/normal_distribution.csv', {
+    Papa.parse('data/normal_distribution.csv', {
       download: true,
       delimiter: ',',
       complete: (result) => {
