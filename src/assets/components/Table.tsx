@@ -17,7 +17,7 @@ const Table: React.FC = () => {
         setData(result.data as string[][]);
       },
       error: (error) => {
-        console.error("CSV parsing error:", error.message);
+        console.error("CSV parsing error: ", error.message);
       }
     });
   }, []);
