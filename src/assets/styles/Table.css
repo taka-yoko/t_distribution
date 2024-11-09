@@ -1,0 +1,6 @@
+/* src/styles/Table.css */
+.table {
+  border-collapse: collapse;
+  width: 600px;
+  font-size: 16px;
+}

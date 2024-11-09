@@ -1,0 +1,36 @@
+/* src/components/Cell.css */
+.cell {
+  border: 1px solid black;
+  height: 25px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* 1行目のセルの背景色設定 */
+.r1 {
+  background-color: #c0c0c0;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1; /* 他のセルより前面に表示 */
+}
+
+/* 1列目のセルの背景色設定 */
+.c1 {
+  background-color: #c0c0c0;
+  font-weight: bold;
+}
+
+/* 選択された行の背景色 */
+.selected-row .cell {
+  background-color: #ffd700;
+}
+
+.selected-col {
+  background-color: #ffd700;
+}
+
+/* 行と列が交差するセルの背景色設定 */
+.highlighted-intersection {
+  background-color: #ff8c00 !important;
+}
