@@ -6,7 +6,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <h1>Normal Distribution</h1>
+      <h1>T Distribution Table</h1>
       <Table />
     </>
   )
