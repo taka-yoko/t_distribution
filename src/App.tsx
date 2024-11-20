@@ -6,7 +6,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <h1>T Distribution Table</h1>
+      <h1 className='text-4xl md:text-5xl lg:text-6xl'>T Distribution</h1>
       <Table />
     </>
   )

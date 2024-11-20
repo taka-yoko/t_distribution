@@ -32,29 +32,31 @@ const Table: React.FC = () => {
 
 
   return (
-    <table className='table'>
-      <tbody>
-        {data.map((row, rowIndex) => (
-          <tr
-            key={rowIndex}
-            className={selectedRow === rowIndex ? 'selected-row' : ''}
-          >
-            {row.map((cell, colIndex) => (
-              <Cell
-                key={`${rowIndex}-${colIndex}`}
-                value={cell}
-                row={rowIndex + 1}
-                col={colIndex + 1}
-                selectedRow={selectedRow}
-                selectedCol={selectedCol}
-                onRowSelect={handleRowSelect}
-                onColSelect={handleColSelect}
-                />
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className='h-screen overflow-x-auto'>
+      <table className='mt-5 border-collapse border border-gray-300'>
+        <tbody>
+          {data.map((row, rowIndex) => (
+            <tr
+              key={rowIndex}
+              className={selectedRow === rowIndex ? 'selected-row' : ''}
+            >
+              {row.map((cell, colIndex) => (
+                <Cell
+                  key={`${rowIndex}-${colIndex}`}
+                  value={cell}
+                  row={rowIndex}
+                  col={colIndex}
+                  selectedRow={selectedRow}
+                  selectedCol={selectedCol}
+                  onRowSelect={handleRowSelect}
+                  onColSelect={handleColSelect}
+                  />
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
 

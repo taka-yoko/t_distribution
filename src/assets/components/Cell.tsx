@@ -13,10 +13,10 @@ interface CellProps {
 
 const Cell: React.FC<CellProps> = ({ value, row, col, selectedRow, selectedCol, onRowSelect, onColSelect }) => {
   const handleClick = () => {
-    if(row === 1 && onColSelect) {
-      onColSelect(col - 1);
-    } else if(col === 1 && onRowSelect) {
-      onRowSelect(row - 1);
+    if(row === 0 && onColSelect) {
+      onColSelect(col);
+    } else if(col === 0 && onRowSelect) {
+      onRowSelect(row);
     }
   }
 
@@ -24,9 +24,12 @@ const Cell: React.FC<CellProps> = ({ value, row, col, selectedRow, selectedCol, 
     'cell',
     `r${row}`,
     `c${col}`,
-    selectedRow === row - 1 ? 'selected-row' : '',
-    selectedCol === col - 1 && col !== 1 ? 'selected-col' : '',
-    selectedRow === row - 1 && selectedCol === col - 1 && col !== 1 ? 'highlighted-intersection' : '',
+    col === 0 ? 'sticky left-0' : '',
+    row === 0 ? 'sticky top-0' : '',
+    col === 0 && row === 0 ? 'z-10' : '',
+    selectedRow === row ? 'selected-row' : '',
+    selectedCol === col && col !== 0 ? 'selected-col' : '',
+    selectedRow === row && selectedCol === col && col !== 0 ? 'highlighted-intersection' : '',
   ].join(' ');
 
   return (

@@ -7,16 +7,13 @@
 }
 
 /* 1行目のセルの背景色設定 */
-.r1 {
+.r0 {
   background-color: #c0c0c0;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1; /* 他のセルより前面に表示 */
 }
 
 /* 1列目のセルの背景色設定 */
-.c1 {
+.c0 {
   background-color: #c0c0c0;
   font-weight: bold;
 }

@@ -48,3 +48,7 @@ export default tseslint.config({
   },
 })
 ```
+
+### github page url
+
+https://taka-yoko.github.io/t_distribution/
